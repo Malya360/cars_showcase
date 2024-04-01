@@ -26,6 +26,7 @@ export default async function Home() {
        </div>
 
        <div className="home__filters">
+        
         <SearchBar />
 
         <div className="home__filter-container">

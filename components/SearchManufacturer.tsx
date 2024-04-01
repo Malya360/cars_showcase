@@ -7,6 +7,7 @@ import React from 'react'
 import { manufacturers } from '@/constants';
 
 const SearchManufacturer = ({manufacturer,setManufacturer}:setManufacturerProps) => {
+
   const [query,setquery] = useState('');
    
   const filteredManufacturers =
@@ -40,7 +41,7 @@ const SearchManufacturer = ({manufacturer,setManufacturer}:setManufacturerProps)
               <Combobox.Input 
               className="search-manufacturer__input"
               placeholder="Volkswagen"
-              displayValue={(manufacture:string)=>manufacture}
+              displayValue={(manufacturer:string)=>manufacturer}
               onChange= {(e)=> setquery(e.target.value)}
                />
 
@@ -64,7 +65,7 @@ const SearchManufacturer = ({manufacturer,setManufacturer}:setManufacturerProps)
                    filteredManufacturers.map((item) => (
                      <Combobox.Option
                        key={item}
-                      className={({ active }) =>
+                       className={({ active }) =>
                          `relative search-manufacturer__option ${active ? 'bg-primary-blue text-white' : 'text-gray-900'}`
                       }
                       value={item}
