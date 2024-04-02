@@ -36,10 +36,13 @@ const CarCard = ({car}:CarCardProps) => {
         </p>
 
         <div className='relative w-full h-40 my-3 object-contain'>
-            <Image src={generateCarImageUrl(car)}  alt='car model' fill priority className='object-contain'/>
+            {/* <Image src={generateCarImageUrl(car)}  alt='car model' fill priority className='object-contain'/> */}
+            <Image src="/hero.png"  alt='car model' fill priority className='object-contain'/>
+
         </div>
     
         <div className='relative flex w-full mt-2'>
+
              <div className='flex group-hover:invisible w-full justify-between text-gray'>
 
                 <div className="flex flex-col justify-center items-center gap-2">
@@ -62,7 +65,7 @@ const CarCard = ({car}:CarCardProps) => {
                         {city_mpg} MPG
                      </p>
                 </div>
-                
+
              </div>
              <div className='car-card__btn-container'>
                 
@@ -77,7 +80,7 @@ const CarCard = ({car}:CarCardProps) => {
              </div>
         </div>
 
-        <CardDetails 
+        <CardDetails
         isOpen={isOpen} 
         closeModal={()=>setIsOpen(false)}
         car={car}
